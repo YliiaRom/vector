@@ -1,0 +1,31 @@
+.taxesBox {
+  padding: 10px;
+  border: 2px solid #999;
+  border-radius: 5px;
+  min-height: 500px;
+}
+.correctly {
+  padding: 10px;
+  animation: start 1s ease-in;
+}
+.taxesBox ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 5px;
+
+  text-decoration: none;
+  list-style-type: none;
+  padding: 30px 15px;
+  border-radius: 5px;
+  background: radial-gradient(circle, #fff, #999);
+}
+@keyframes start {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
