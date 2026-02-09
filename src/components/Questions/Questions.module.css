@@ -1,0 +1,90 @@
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.section {
+  margin-bottom: 100px;
+}
+.listQuestions {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  background-color: rgb(50, 47, 47);
+  padding: 10px;
+}
+.card {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  max-width: 500px;
+
+  background-color: #3e414a;
+  background: linear-gradient(
+    37deg,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    #da88051e,
+    #da88056c,
+    #f1a936ca,
+    #f5a31ed9
+  );
+
+  color: #d9d7d7;
+  padding: 30px 10px;
+
+  border-radius: 10px;
+  border: 1px solid #9999994a;
+  box-shadow: 0px 5px 5px #000;
+}
+.cardNumber {
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: fit-content;
+  padding: 0;
+  margin: 0 auto 10px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 3em;
+
+  /* text-shadow:
+    0px 1px 2px #070606,
+    0px 2px 0px #fff; */
+  background-clip: content-box;
+}
+
+.card label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+
+  border-left: 2px groove #f5a31ed9;
+
+  padding-left: 7px;
+}
+.card input {
+  padding: 10px;
+  font-size: 3em;
+  border-radius: 5px;
+  box-shadow:
+    -2px -2px 0px #a89043,
+    2px 2px 7px #000,
+    inset -5px -5px 10px #1716165c,
+    inset 5px 5px 15px #ffffff34;
+  outline-style: none;
+  color: #fffefe;
+  font-weight: 900;
+  text-shadow:
+    0px 1px 0px #000,
+    0px 1px 0px #000,
+    0px 2px 1px #000;
+}

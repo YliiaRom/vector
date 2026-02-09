@@ -1,0 +1,71 @@
+.sectoin {
+  margin-top: 100px;
+  width: 100%;
+  padding: 5em 10px;
+
+  box-shadow: 0px 5px 10px #000;
+  border-radius: 7px;
+
+  background-image:
+    repeating-linear-gradient(to right, transparent 0 5px, #ffffff67 5px 6px),
+    linear-gradient(to right, transparent, #ffb255, #999, transparent);
+  color: #ffffffae;
+
+  margin-bottom: 100px;
+}
+.sectoin h2 {
+  text-shadow:
+    0px 1px 0px #ffffffb6,
+    0px 2px 1px #000;
+  font-size: 2em;
+}
+.item {
+  padding: 10px;
+}
+.item button {
+  width: 100%;
+  min-height: 70px;
+  background-color: transparent;
+  border: 1px solid #ffb255;
+  padding: 10px 1em;
+  background: radial-gradient(circle, #fff, #999);
+  box-shadow:
+    -2px -2px 4px #fff,
+    2px 2px 4px #999,
+    0px 6px 18px #000,
+    inset 10px 10px 20px #ffffffa4,
+    inset -10px -10px 20px #00000036;
+  outline: none;
+  border-radius: 30px;
+  font-size: 1.1em;
+  transition: all 0.5s;
+}
+.description {
+  font-size: 1.2em;
+
+  padding: 20px 20px;
+  margin-top: 7px;
+  background-color: #000000a1;
+  color: #e6c181;
+  color: #dedddd;
+  /* color: #ffffffdb; */
+  backdrop-filter: blur(25px);
+  border-radius: 0px 0px 10px 10px;
+  box-shadow:
+    0px 5px 0px #000000c5,
+    0px 7px 10px #000;
+  border: 1px solid #fbef03;
+}
+.item button:hover {
+  background: radial-gradient(circle, #f9bb4890, #684f3086, #492b06);
+  color: #fcebd6f3;
+  box-shadow:
+    -2px -2px 4px #fff,
+    2px 2px 4px #999,
+    0px 6px 18px #000,
+    inset 10px 10px 20px #000,
+    inset -10px -10px 20px #ffffff58;
+  text-shadow:
+    0px 1px 0px #000,
+    0px 2px 10px #000;
+}

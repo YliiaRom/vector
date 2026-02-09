@@ -5,7 +5,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* background-color: #242424; */
+  background-color: rgb(50, 47, 47);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -28,6 +29,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: rgb(50, 47, 47);
 }
 
 h1 {
@@ -57,7 +59,9 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
+    color: #fff;
     background-color: #ffffff;
+    background-color: rgb(50, 47, 47);
   }
   a:hover {
     color: #747bff;
