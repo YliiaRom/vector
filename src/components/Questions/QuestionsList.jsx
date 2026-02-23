@@ -3,7 +3,7 @@ import QuestionsItem from "./QuestionsItem";
 import css from "./Questions.module.css";
 function QuestionsList() {
   return (
-    <div className={css.section}>
+    <>
       <h2>Перевірка знань з теми «Податки»:</h2>
       {questions && (
         <ul className={css.listQuestions}>
@@ -14,7 +14,7 @@ function QuestionsList() {
           ))}
         </ul>
       )}
-    </div>
+    </>
   );
 }
 

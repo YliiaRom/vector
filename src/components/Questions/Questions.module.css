@@ -4,9 +4,6 @@ ol {
   padding: 0;
   margin: 0;
 }
-.section {
-  margin-bottom: 100px;
-}
 .listQuestions {
   display: flex;
   flex-direction: column;
