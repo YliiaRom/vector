@@ -59,11 +59,12 @@
   font-size: 1.2em;
 
   box-shadow:
-    -2px -2px 4px #ffffffd5,
+    -2px -2px 4px #ffffff6b,
     3px 3px 6px #000000,
     inset 5px 5px 10px #000,
-    inset 10px 10px 40px #000,
-    inset -10px -10px 20px #fff;
+    inset 10px 10px 40px #00000087,
+    inset -10px -10px 12px #ffffff27;
+  border: 2px solid #f7a848;
 }
 .boxRate input {
   max-width: 50%;
