@@ -191,13 +191,13 @@ function Calculator02() {
       </div>
       {/* --result-- */}
       <div className={css.description}>
-        <p>{`Податок у Пенсійний фонд (1%-від оціночної вартості квартири): ${pensionTax}грн.`}</p>
-        <p>{`Податок - Державне мито (1%-від оціночної вартості квартири): ${stateDuty}грн.`}</p>
+        <p>{`Податок у Пенсійний фонд (1%-від оціночної вартості квартири): ${pensionTax?.toFixed(2)}грн.`}</p>
+        <p>{`Податок - Державне мито (1%-від оціночної вартості квартири): ${stateDuty?.toFixed(2)}грн.`}</p>
         <p>{`Послуга оцінки квартири : ${appraisalCost}грн.`}</p>
         <p>{`Послуги нотаріуса (Загальна сумма = ${notaryTotal}грн.): покупцю : ${notaryBuyer.toFixed(2)}грн/ продавцю :${notarySeller.toFixed(2)}грн`}</p>
         <p>{`Як правило, оплата послуг рієлтора становить ${sumParsent}% від вартості квартири.`}</p>
-        <p>{`Послуги рієлтора ${percentBayer}% для покупця: ${realtorPriceBayer}$`}</p>
-        <p>{`Послуги рієлтора ${percentSeller}% для продавця: ${realtorPriceSeller}$`}</p>
+        <p>{`Послуги рієлтора ${percentBayer}% для покупця: ${realtorPriceBayer.toFixed(2)}$`}</p>
+        <p>{`Послуги рієлтора ${percentSeller}% для продавця: ${realtorPriceSeller.toFixed(2)}$`}</p>
       </div>
 
       <hr />
@@ -207,10 +207,10 @@ function Calculator02() {
           <h3>Податки продавця:</h3>
           <p>{` ${stateDuty}грн. (Податок - Державне мито) + ${appraisalCost}грн.(Послуга оцінки квартири) +${notarySeller}грн.(Послуги нотаріуса) + ${realtorPriceSeller}$(Послуги рієлтора)  
        `}</p>
-          <p>{`   = ${totalSumSeller}грн +  ${realtorPriceSeller}$ `}</p>
+          <p>{`   = ${totalSumSeller}грн +  ${realtorPriceSeller.toFixed(2)}$ `}</p>
           <div>
             {exchangeRateRun && (
-              <p>{`= ${totalSumSeller}грн + ${convertationSumRealtorSeller.toFixed(2)}грн. = ${totalSumSellerUAH}грн.`}</p>
+              <p>{`= ${totalSumSeller}грн + ${convertationSumRealtorSeller.toFixed(2)}грн. = ${totalSumSellerUAH.toFixed(2)}грн.`}</p>
             )}
           </div>
         </div>
@@ -232,9 +232,9 @@ function Calculator02() {
         <div>
           <h3>Податки покупця:</h3>
           <p>{`${pensionTax}грн.(Податок у Пенсійний фонд) + ${notaryBuyer}грн.(Послуги нотаріуса) + ${realtorPriceBayer}$(Послуги рієлтора) `}</p>
-          <p>{`   = ${totalSumBayer}грн +  ${realtorPriceBayer}$`}</p>
+          <p>{`   = ${totalSumBayer.toFixed(2)}грн +  ${realtorPriceBayer.toFixed(2)}$`}</p>
           {exchangeRateRun && (
-            <p>{`= ${totalSumBayer}грн + ${convertationSumRealtorBayer.toFixed(2)}грн.=  ${totalSumBayerUAH}грн.`}</p>
+            <p>{`= ${totalSumBayer.toFixed(2)}грн + ${convertationSumRealtorBayer.toFixed(2)}грн.=  ${totalSumBayerUAH.toFixed(2)}грн.`}</p>
           )}
         </div>
       </div>
