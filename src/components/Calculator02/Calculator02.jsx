@@ -205,7 +205,7 @@ function Calculator02() {
       <div className={css.resultBox}>
         <div>
           <h3>Податки продавця:</h3>
-          <p>{` ${stateDuty}грн. (Податок - Державне мито) + ${appraisalCost}грн.(Послуга оцінки квартири) +${notarySeller}грн.(Послуги нотаріуса) + ${realtorPriceSeller}$(Послуги рієлтора)  
+          <p>{` ${stateDuty}грн. (Податок - Державне мито) + ${appraisalCost}грн.(Послуга оцінки квартири) +${notarySeller}грн.(Послуги нотаріуса) + ${realtorPriceSeller.toFixed(2)}$(Послуги рієлтора)  
        `}</p>
           <p>{`   = ${totalSumSeller}грн +  ${realtorPriceSeller.toFixed(2)}$ `}</p>
           <div>
@@ -231,7 +231,7 @@ function Calculator02() {
 
         <div>
           <h3>Податки покупця:</h3>
-          <p>{`${pensionTax}грн.(Податок у Пенсійний фонд) + ${notaryBuyer}грн.(Послуги нотаріуса) + ${realtorPriceBayer}$(Послуги рієлтора) `}</p>
+          <p>{`${pensionTax}грн.(Податок у Пенсійний фонд) + ${notaryBuyer}грн.(Послуги нотаріуса) + ${realtorPriceBayer.toFixed(2)}$(Послуги рієлтора) `}</p>
           <p>{`   = ${totalSumBayer.toFixed(2)}грн +  ${realtorPriceBayer.toFixed(2)}$`}</p>
           {exchangeRateRun && (
             <p>{`= ${totalSumBayer.toFixed(2)}грн + ${convertationSumRealtorBayer.toFixed(2)}грн.=  ${totalSumBayerUAH.toFixed(2)}грн.`}</p>
