@@ -2,14 +2,14 @@ import css from "./Acordion.module.css";
 import listQuestions from "../helpers/vaucher.json";
 import { memo, useState } from "react";
 function Acordion() {
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  let openingIndex = -1;
+  // let openingIndex = -1;
 
   function handlerChangeIndex(numIndex) {
     console.log(numIndex);
-    openingIndex = activeIndex === numIndex ? -1 : numIndex;
-    setActiveIndex(openingIndex);
+    // openingIndex = activeIndex === numIndex ? -1 : numIndex;
+    setActiveIndex(activeIndex === numIndex ? -1 : numIndex);
   }
   console.log("acordion");
   return (

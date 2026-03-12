@@ -9,6 +9,9 @@ function Calculator02() {
   const [percentBayer, setPercentBayer] = useState(2);
   const [percentSeller, setPercentSeller] = useState(2);
   const [rate, setRate] = useState("");
+  const [rateNBU, setRateNBU] = useState("");
+  const [rateUSD, setRateUSD] = useState("");
+  const [rateUSH, setRateUSH] = useState("");
   const [exchangeRateRun, setExchangeRateRun] = useState(false);
 
   const handlerPriceChange = (e) => {
@@ -43,6 +46,15 @@ function Calculator02() {
   const handlerExchangeRate = () => {
     setExchangeRateRun(true);
   };
+  const handlerExchangeRateNBU = (e) => {
+    setRateNBU(e.target.value);
+  };
+  const handlerExchangeRateUSD = (e) => {
+    setRateUSD(e.target.value);
+  };
+  const handlerExchangeRateUSH = (e) => {
+    setRateUSH(e.target.value);
+  };
 
   const normalizedAppraisal = Number(appraisal) || 0;
 
@@ -51,6 +63,9 @@ function Calculator02() {
   const normalizedPersentBayer = Number(percentBayer) || 0;
   const normalizedPersentSeller = Number(percentSeller) || 0;
   const normalizedRate = Number(rate) || 0;
+  const normalizedRateNBU = Number(rateNBU) || 0;
+  const normalizedRateUSD = Number(rateUSD) || 0;
+  const normalizedRateUSH = Number(rateUSH) || 0;
 
   const pensionTax = normalizedAppraisal * 0.01;
   const stateDuty = normalizedAppraisal * 0.01;
@@ -71,9 +86,56 @@ function Calculator02() {
 
   const totalSumSellerUAH = totalSumSeller + convertationSumRealtorSeller;
   const totalSumBayerUAH = totalSumBayer + convertationSumRealtorBayer;
+
+  const totalValueSumInUSD = normalizedRateUSD;
+  const totalSumInUAH = totalValueSumInUSD * normalizedRateNBU;
+  const totalSumInUSD =
+    normalizedRateNBU > 0 ? normalizedRateUSH / normalizedRateNBU : 0;
+
   return (
     <div className={css.box}>
-      <h2>Розрахунок податків при купівлі квартри</h2>
+      <h2>Розрахунок податків при купівлі квартири</h2>
+      <div className={css.convertBox}>
+        <p>Щоб конвертувати долари в гривні, введіть курс НБУ.</p>
+        <label>
+          Курс НБУ:
+          <input
+            type="number"
+            value={rateNBU}
+            onChange={(e) => handlerExchangeRateNBU(e)}
+          />
+        </label>
+        <label>
+          Введіть суму в доларах:
+          <input
+            type="number"
+            value={rateUSD}
+            onChange={(e) => handlerExchangeRateUSD(e)}
+          />
+        </label>
+        <label>
+          Введіть суму в грн.:
+          <input
+            type="number"
+            value={rateUSH}
+            onChange={(e) => handlerExchangeRateUSH(e)}
+          />
+        </label>
+        <div>
+          {totalSumInUAH > 0 ? (
+            <p> {` ${totalValueSumInUSD}$ =  ${totalSumInUAH}грн.`}</p>
+          ) : (
+            <p>{`Курс НБУ або сума($) ще не введені.`}</p>
+          )}
+        </div>
+        <div>
+          {totalSumInUSD > 0 ? (
+            <p>{` ${normalizedRateUSH}грн =  ${totalSumInUSD.toFixed(2)}$`}</p>
+          ) : (
+            <p>{`Курс НБУ або сума(грн.) ще не введені.`}</p>
+          )}
+        </div>
+      </div>
       {/* ----inputs-- */}
       <div className={css.inputsList}>
         <label>

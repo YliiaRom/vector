@@ -113,3 +113,28 @@
 .box .resultBox {
   font-size: 1.2em;
 }
+.convertBox {
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 20px;
+  border: 2px solid #9999993e;
+  box-shadow: 0px 0px 10px #000;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+.convertBox label {
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+.convertBox label input {
+  font-size: 25px;
+  max-width: 150px;
+  padding: 5px 7px;
+  border: 1px solid #ab6c07;
+  border-radius: 5px;
+  outline: 1px solid #f7d40a;
+}
